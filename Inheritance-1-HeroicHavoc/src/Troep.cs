@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inheritance_1_HeroicHavoc.src
 {
-    internal class Troep
+    abstract class Troep
     {
         public double Strength { get; set; }
         public int HealthPoints { get; set; }

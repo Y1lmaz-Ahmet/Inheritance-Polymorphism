@@ -13,23 +13,36 @@ namespace Inheritance_1_HeroicHavoc
         {
             Console.WriteLine("welcome to Heroic Havoc!");
 
-            //initializing the classes:
+            //initializing the classes: ✅
             Barbaar barbaar = new Barbaar(99, 99, "Bjorn Ironsidekick", 99);
             Goblin goblin = new Goblin(45, 50, "Snotgurgle the Snotty", 15);
             Heks heks = new Heks(35, 10, "Hagatha Hubblebubble", 20);
-            Console.WriteLine(barbaar);
-            Console.WriteLine(goblin);
-            Console.WriteLine(heks);
-            //initialize Troops List:
+            //Console.WriteLine(barbaar);
+            //Console.WriteLine(goblin);
+            //Console.WriteLine(heks);
+            //initialize Troops List: ✅
             List<Troep> troops = new List<Troep>();
             troops.Add(barbaar);
             troops.Add(goblin);
             troops.Add(heks);
-            //for-each loop to check data:
+            //for-each loop to check data: ✅
             foreach (Troep t in troops)
             {
                 Console.WriteLine(t);
             }
+            heks.Appear();
+            barbaar.GetWild();
+            
+            foreach(Troep t in troops)
+            {
+               t.Move();
+            }
+            heks.Hide();
+            goblin.StealGold();
+            goblin.StealGold();
+            goblin.StealGold();
+            //testing if the stealGoldMethod actually works: ✅
+            Console.WriteLine( goblin.ToString());
 
         }
     }
